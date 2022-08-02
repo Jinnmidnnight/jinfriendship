@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://jinnmidnnight.github.io/jinfriendship/">
+    <meta property="og:title" content="승현 ♥ 우정">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="추억1.jpg" width="400px" height="200px">
+    <meta property="og:description" content="승현 ♥ 우정 커플의 기념일과 추억들">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>기념일 계산기</title>
     <style>
@@ -89,7 +94,7 @@
         var now = new Date();
         var start = new Date('2019-11-28');
 
-        var timeDiff = now.getTime() - start.getTime();
+        var timeDiff = now.getTime() - (start.getTime() - (1000 * 60 * 60 * 9));
         var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24) + 1);
         $('#love').text(day + '일째');
     </script>
