@@ -79,7 +79,7 @@
         <h3 id='love'>0일째</h3>
         <h4 class="date">2019.11.28</h4>
     </div>
-    <hr/>
+    <hr class="special-day">
     <section class='special-day'>
         <h3 class='title'>1000일</h3>
         <div class='date-box'>
@@ -87,7 +87,7 @@
             <p id='thousand-date' class='date'>0000.00.00</p>
         </div>
     </section>
-    <hr/>
+    <hr class="special-day">
     <hr/>
         <h3 style="text-align:center;">우리의 추억♥</h1>
     <hr/>
@@ -115,6 +115,10 @@
         var timeDiff3 = thousand.getTime() - now.getTime();
         var day3 = Math.floor(timeDiff3 / (1000 * 60 * 60 * 24) + 1);
         $('#thousand').text(day3 + '일 남음');
+
+        if (day3 <= 0) {
+            $('.special-day').hide();
+        }
 
     </script>
 </body>
